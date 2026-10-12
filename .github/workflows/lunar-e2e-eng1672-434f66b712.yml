@@ -1,0 +1,12 @@
+name: lunar-e2e-eng1672-434f66b712
+on:
+  push:
+    branches: ["e2e"]
+    paths:
+      - compliance/eng-1672-434f66b712.txt
+jobs:
+  hold-open:
+    runs-on: localdev-e2e-test-38273029923-1-github-12-e2e
+    steps:
+      - name: Keep the workflow incomplete during the release check
+        run: sleep 300
